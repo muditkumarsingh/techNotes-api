@@ -1,0 +1,10 @@
+refactoring detials
+
+    1.unique name 
+
+    2.collation({locale:'en',strength:2}) use for case sensivity
+    
+    3.new package for async handler
+
+    4. error message
+        res.json({ message: err.message ,isError:true}); 
