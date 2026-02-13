@@ -97,7 +97,7 @@ const logout = (req, res) => {
         return res.status(200).json({ message: 'Already logged out' })
     }
 
-    res.clearCookie('jwt', { httpOnly: true, sameSite: 'Lax', secure: false ,path:'/'})
+    res.clearCookie('jwt', { httpOnly: true, sameSite: 'None', secure: true ,path:'/'})
     res.status(200).json({ message: 'Cookie cleared' })
 }
 
