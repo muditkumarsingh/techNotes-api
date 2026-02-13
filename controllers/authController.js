@@ -47,8 +47,8 @@ const login = asyncHandler(async (req, res, next) => {
 
     res.cookie('jwt', refreshToken, {
         httpOnly: true,
-        secure: false, //for development only
-        sameSite: 'Lax',
+        secure: true, //for development only
+        sameSite: 'None',
         maxAge: 7 * 24 * 60 * 60 * 1000  //to match refresh token
     })
 
