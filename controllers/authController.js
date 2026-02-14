@@ -45,14 +45,14 @@ const login = asyncHandler(async (req, res, next) => {
     )
 
 
-    res.cookie('jwt', refreshToken, {
+    return res.cookie('jwt', refreshToken, {
         httpOnly: true,
         secure: true, //for development only
         sameSite: 'None',
         maxAge: 7 * 24 * 60 * 60 * 1000  //to match refresh token
     })
-
-    res.json({ accessToken })
+        .status(200)
+        .json({ accessToken })
 
 })
 
@@ -89,7 +89,7 @@ const refresh = (req, res) => {
             res.json({ accessToken })
         })
     )
-} 
+}
 
 const logout = (req, res) => {
     const cookies = req.cookies
@@ -97,7 +97,7 @@ const logout = (req, res) => {
         return res.status(200).json({ message: 'Already logged out' })
     }
 
-    res.clearCookie('jwt', { httpOnly: true, sameSite: 'None', secure: true ,path:'/'})
+    res.clearCookie('jwt', { httpOnly: true, sameSite: 'None', secure: true, path: '/' })
     res.status(200).json({ message: 'Cookie cleared' })
 }
 

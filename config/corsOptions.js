@@ -9,7 +9,6 @@ const corsOptions = {
         }
     },
     credentials: true,
-    exposedHeaders: ['set-cookie'], // 🔥 REQUIRED
     optionsSuccessStatus: 200
 }
 
