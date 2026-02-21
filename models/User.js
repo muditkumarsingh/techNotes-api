@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose')
 
 const userSchema = new mongoose.Schema({
     username: {
@@ -10,13 +10,13 @@ const userSchema = new mongoose.Schema({
         required: true
     },
     roles: {
-        type: [String], //this makes a array of string
-        default:["Employee"]
+        type: [String],
+        default: ["Employee"]
     },
     active: {
         type: Boolean,
-        default:true
+        default: true
     }
-});
+})
 
-module.exports = mongoose.model("User",userSchema);
+module.exports = mongoose.model('User', userSchema)

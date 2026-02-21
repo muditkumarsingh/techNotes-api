@@ -1,32 +1,30 @@
 {
-  "name": "21-technotes-mern",
+  "name": "lesson_13-be",
   "version": "1.0.0",
+  "description": "techNotes MERN Project",
   "main": "server.js",
   "scripts": {
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "start": "node server",
+    "dev": "nodemon server"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "techNotes MERN stack application",
   "dependencies": {
-    "bcrypt": "^6.0.0",
-    "cookie-parser": "^1.4.7",
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
-    "date-fns": "^4.1.0",
-    "dotenv": "^17.2.3",
-    "express": "^5.2.1",
-    "express-async-handler": "^1.2.0",
-    "express-rate-limit": "^8.2.1",
-    "json-web-token": "^3.2.0",
-    "jsonwebtoken": "^9.0.3",
-    "mongoose": "^6.13.8",
-    "mongoose-controller": "^0.0.1",
-    "mongoose-sequence": "^6.0.1",
+    "date-fns": "^2.29.1",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-async-errors": "^3.1.1",
+    "express-rate-limit": "^6.5.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.5.0",
+    "mongoose-sequence": "^5.3.1",
     "uuid": "^8.3.2"
   },
   "devDependencies": {
-    "nodemon": "^3.1.11"
+    "nodemon": "^2.0.19"
   }
 }

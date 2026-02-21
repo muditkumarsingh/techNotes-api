@@ -1,14 +1,14 @@
-const express = require('express');
-const router = express.Router();
-const usersControllers = require("../controllers/usersControllers")
+const express = require('express')
+const router = express.Router()
+const usersController = require('../controllers/usersController')
 const verifyJWT = require('../middleware/verifyJWT')
 
 router.use(verifyJWT)
 
-router.route("/")
-    .get(usersControllers.getAllUsers)
-    .post(usersControllers.createNewUser)
-    .patch(usersControllers.updateUser)
-    .delete(usersControllers.deleteUser)
+router.route('/')
+    .get(usersController.getAllUsers)
+    .post(usersController.createNewUser)
+    .patch(usersController.updateUser)
+    .delete(usersController.deleteUser)
 
-module.exports = router;
+module.exports = router
