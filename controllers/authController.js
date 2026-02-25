@@ -39,6 +39,8 @@ const login = async (req, res) => {
         { expiresIn: '7d' }
     )
 
+    console.log(refreshToken, " ", accessToken)
+
     // Create secure cookie with refresh token 
     res.cookie('jwt', refreshToken, {
         httpOnly: true, //accessible only by web server 
